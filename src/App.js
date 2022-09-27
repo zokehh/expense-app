@@ -47,6 +47,10 @@ export default function App() {
         });
       };
     
+    function deleteAllHandler() {
+        setExpenses([])
+    }
+    
     return (
        <div className='container'>
             <ExpenseForm 
@@ -60,6 +64,7 @@ export default function App() {
                     date={exspenses.date}
                 />  
             ))}
+            <button onClick={deleteAllHandler} className='delete-all'>🗑️ Delete All</button>
        </div> 
     )
 }
